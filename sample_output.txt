@@ -1,0 +1,57 @@
+========== Task 1 ==========
+
+Input: 
+/gradlew run --args="Task1 logs hosts task1_output"
+./gradlew run --args="Task1Sort task1_output task1_sorted_output"
+cat task1_sorted_output/part-r-00000 
+
+Output: 
+812	Unknown Location
+198	Intranet
+127	Canada
+87	United States
+80	Robot
+19	Israel
+17	Australia
+16	France
+13	Wherever You Want to Ship
+6	United Kingdom
+4	Korea
+2	Netherlands
+1	Los Alamos
+
+========== Task 2 ==========
+Input: 
+./gradlew run --args="Task2 logs hosts task2_output"
+cat task2_output/part-r-00000 
+
+Output:
+ustralia	/icons/PythonPowered.png	1
+Australia	/icons/gnu-head-tiny.jpg	1
+Australia	/icons/mailman.jpg	1
+Australia	/mailman	1
+Australia	/mailman/admin	1
+Australia	/mailman/admin/webct	1
+Australia	/mailman/listinfo	2
+Australia	/mailman/listinfo/administration	1
+Australia	/mailman/listinfo/cnc_notice	1
+Australia	/twiki/bin/view/Main/SpamAssassinAndPostFix	2
+.
+.
+.
+
+========== Task 3 ==========
+
+Input: 
+./gradlew run --args="Task3 logs hosts task3_output"
+cat task3_output/part-r-00000
+
+Output:
+/	Canada, Netherlands, Wherever You Want to Ship, United States, ...
+/DCC.html	Unknown Location, United Kingdom
+/LateEmail.html	Canada, United States, Unknown Location
+/M83A	Taiwan
+.
+.
+.
+

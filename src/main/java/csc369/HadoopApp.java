@@ -44,6 +44,22 @@ public class HadoopApp {
 		FileInputFormat.addInputPath(job, new Path(otherArgs[1]));
 		FileOutputFormat.setOutputPath(job, new Path(otherArgs[2]));
 		job.setSortComparatorClass(Task1Sort.DescendingIntComparator.class); //Descending order
+	}else if ("Task2".equalsIgnoreCase(otherArgs[0])) {
+		job.setReducerClass(Task2.ReducerImpl.class);
+		job.setMapperClass(Task2.MapperImpl.class);
+		job.setOutputKeyClass(Task2.OUTPUT_KEY_CLASS);
+		job.setOutputValueClass(Task2.OUTPUT_VALUE_CLASS);
+		FileInputFormat.addInputPath(job, new Path(otherArgs[1])); 
+		job.addCacheFile(new Path(otherArgs[2]).toUri());
+		FileOutputFormat.setOutputPath(job, new Path(otherArgs[3]));
+	}else if ("Task3".equalsIgnoreCase(otherArgs[0])) {
+		job.setReducerClass(Task3.ReducerImpl.class);
+		job.setMapperClass(Task3.MapperImpl.class);
+		job.setOutputKeyClass(Task3.OUTPUT_KEY_CLASS);
+		job.setOutputValueClass(Task3.OUTPUT_VALUE_CLASS);
+		FileInputFormat.addInputPath(job, new Path(otherArgs[1])); 
+		job.addCacheFile(new Path(otherArgs[2]).toUri()); 
+		FileOutputFormat.setOutputPath(job, new Path(otherArgs[3]));
 	}
 	else {
 	    System.out.println("Unrecognized job: " + otherArgs[0]);
