@@ -14,8 +14,6 @@ import org.apache.hadoop.mapreduce.Reducer;
 
 
 
-
-
 public class Task2 {
 
     // Final output: <(Country, URL), visit_count>
